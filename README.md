@@ -1,30 +1,17 @@
-# React + TypeScript + Vite
+# Ignite Pomodoro Timer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Durante o módulo "Aprofundando em Hooks" do curso de ReactJS da Rocketseat, aprendemos a desenvolver um temporizador no qual você configura o nome de um projeto ou uma tarefa em que deseja trabalhar e o tempo que deseja trabalhar nele. Ao inicializar o temporizador, é possível imterromper e começar outro projeto ou tarefa definindo uma nova duração. Indo para a aba de histórico, é possível acessar um histórico de todos os projetos e tarefas criadas e seus respectivos status (finalizado, interrompido ou em andamento).
 
-Currently, two official plugins are available:
+## Aprendizados
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Nesse projeto foram utilizados **styled-components**, aprendemos a criar styled components e aplicar cores definidas pelo tema proveniente do provider ThemeProvider, aprendemos a configurar tipagem de temas e aprendemos a aplicar estilos globais.
 
-## Expanding the ESLint configuration
+Também foi utilizado a biblioteca **react-router-dom** para criarmos páginas em diferentes rotas da nossa aplicação. Como o layout das telas não mudam muito independente da rota que o usuário acessa, foi utilizado o Outlet da biblioteca react-router-dom.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Passamos pelos conceitos de **controlled e uncontrolled components** identificando as ventagens e desvantagens de cada um dos métodos. Foi apresentado o hook **react-hook-form**, que reúne o melhor dos dois mundos, com integação com a biblioteca zod de validação de dados de formulário.
 
-- Configure the top-level `parserOptions` property like this:
+O **useEffect** foi outro hook que aprendemos durante o segundo módulo do curso de ReactJS da Rocketseat. Utilizado na funcionalidade de inicializar, decrementar e interromper o temporizador, foi mostrado as formar corretas e incorretas de se utilizar o useEffect para sempre optarmos pelo método mais performático e sempre seguindo as boas práticas.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Também foi explicado o conceito de **prop drilling** e como resolver esse problema com o **Context API**. Primeiramente, aprendemos como criar contextos para compartilhar informações entre componentes e, posteriormente, foi apresentado como compartilhar dados entre diferentes páginas e como podemos fazer a manipulação desses dados.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Por fim, foi apresentado o hook **useReducer** utilizado para manipular o estado que armazena os ciclos do temporizador. Ações como criar um novo ciclo, interromper e marcar como concluída foram definidas pelo hook tornando o código mais simples e limpo.
